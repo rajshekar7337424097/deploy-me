@@ -40,6 +40,7 @@
 				      <username>${user}</username>
 				      <password>${pass}</password>
 				      <applicationName>${cloudhub.application.name}</applicationName>
+				      <region>us-east-1</region>
 				      <replicas>1</replicas>
 				      <vCores>1</vCores>
 				    </cloudhub2Deployment>
