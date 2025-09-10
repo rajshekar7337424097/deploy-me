@@ -10,7 +10,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 				<fixed-frequency frequency="60" timeUnit="MINUTES"/>
 			</scheduling-strategy>
 		</scheduler>
-		<logger level="INFO" doc:name="Logger" doc:id="573a0671-713c-4974-8e97-3a0c99f98bbb" message="deploy  demo application deployed succesfully"/>
+		<logger level="INFO" doc:name="Logger" doc:id="573a0671-713c-4974-8e97-3a0c99f98bbb" message="deploy   application deployed succesfully"/>
 		<error-handler >
 			<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="64e80107-365a-4702-9d21-92a99bf4e679" type="ANY">
 				<ee:transform doc:name="Transform Message" doc:id="0794607d-cc72-45f2-8876-c782acce52cc" >
