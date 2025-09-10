@@ -1,0 +1,30 @@
+# This workflow will build a package using Maven and then publish it to GitHub packages when a release is created
+# For more information see: https://github.com/actions/setup-java/blob/main/docs/advanced-usage.md#apache-maven-with-a-settings-path
+
+name: dev - Build and Deploy
+
+on:
+  release:
+    types: master
+
+jobs:
+  buildAndDeploy:
+    runs-on: ubuntu-latest
+    steps:
+#first, we need to checkout our Mule application's code
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Build and deploy artifact to sandbox
+      run: mvn -B deploy -DmuleDeploy
+#Pass in the secrets we need for deployment as environment variables
+    env:
+       username: ${{ secrets.USERNAME }}
+       password: ${{ secrets.PASSWORD }}
+       appRuntime: 4.9.7-java17
+       cloudhubApplicationName: deploy-demo
+       environment: dev
+       targetName: CH2
+            
+
+
+  
