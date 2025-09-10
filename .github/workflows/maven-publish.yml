@@ -23,7 +23,7 @@ jobs:
        appRuntime: 4.9.7-java17
        cloudhubApplicationName: deploy-demo
        environment: dev
-       targetName: us-east-1
+       targetName: CH2
             
 
 
